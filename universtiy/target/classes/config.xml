@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Student beans -->
+    <bean id="Student1" class="com.universtiy.beans.Students">
+        <property name="name" value="Prathamesh"/>
+        <property name="id" value="1"/>
+    </bean>
+    <bean id="Student2" class="com.universtiy.beans.Students">
+        <property name="name" value="Damon"/>
+        <property name="id" value="2"/>
+    </bean>
+
+    <!-- Define Course beans -->
+    <bean id="course1" class="com.universtiy.beans.Course">
+        <property name="title" value="Web Development"/>
+    </bean>
+    <bean id="course2" class="com.universtiy.beans.Course">
+        <property name="title" value="Data Science and ML"/>
+    </bean>
+
+    <!-- Define UniversityService bean and inject Course beans -->
+    <bean id="universityService" class="com.universtiy.beans.University">
+        <property name="courses">
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.infosys.admin.Request.IngredientRequest&apos; to &apos;IngredientCategoryRequest&apos;&#x0D;&#x0A;- Original project: &apos;FoodProject&apos;&#x0D;&#x0A;- Original element: &apos;com.infosys.admin.Request.IngredientRequest&apos;&#x0D;&#x0A;- Renamed element: &apos;com.infosys.admin.Request.IngredientCategoryRequest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;IngredientRequest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.infosys.admin.Request{IngredientRequest.java[IngredientRequest" matchStrategy="1" name="IngredientCategoryRequest" qualified="false" references="true" similarDeclarations="false" stamp="1721481575611" textual="false" version="1.0"/>
+</session>

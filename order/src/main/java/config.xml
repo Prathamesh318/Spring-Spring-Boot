@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 	<bean id="order1" class="com.order.beans.Orders">
+ 		<property name="orderId" value="1"></property>
+ 		<property name="orderItems" value="Pizza,Burger and Coke"></property>
+ 		<property name="orderPrice" value="Rs.799" ></property>
+ 		<property name="payment" ref="PaymentService"></property>
+ 		
+ 	</bean>
+ 	
+ 	<bean id="PaymentService"  class="com.order.beans.PaymentService">
+ 			<property name="paymentMethod" value="UPI"></property>
+ 			<property name="payMentId" value="1"></property>
+ 			<property name="gateWayFee" value="2.00"></property>
+ 			<property name="serviceProvider" value="GPAY"></property>
+ 			
+ 	</bean>
+    
+   
+</beans>

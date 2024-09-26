@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="course1" class="com.studentManagement.beans.Courses">
+        <property name="courseId">
+            <value>101</value>
+        </property>
+        <property name="courseName">
+            <value>SpringCourse</value>
+        </property>
+    </bean>
+
+    <bean id="course2" class="com.studentManagement.beans.Courses">
+        <property name="courseId">
+            <value>202</value>
+        </property>
+        <property name="courseName">
+            <value>NodeJS</value>
+        </property>
+    </bean>
+
+    <bean id="student1" class="com.studentManagement.beans.Student" autowire="byType">
+        <property name="studId">
+            <value>1</value>
+        </property>
+        <property name="studName">
+            <value>Prathamesh</value>
+        </property>
+    </bean>
+</beans>

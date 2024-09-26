@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 	   <bean id="book1" class="com.library.beans.Books">
+        <property name="title" value="1984"/>
+        <property name="author" value="George Orwell"/>
+    </bean>
+    <bean id="book2" class="com.library.beans.Books">
+        <property name="title" value="To Kill a Mockingbird"/>
+        <property name="author" value="Harper Lee"/>
+    </bean>
+
+    <!-- Define LibraryService bean and inject Book beans -->
+    <bean id="libraryService" class="com.library.beans.Library">
+        <property name="books">
+            <list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+            </list>
+        </property>
+        <property name="libName" value="Edgeverve Employee Library"></property>
+    </bean>
+    
+   
+</beans>

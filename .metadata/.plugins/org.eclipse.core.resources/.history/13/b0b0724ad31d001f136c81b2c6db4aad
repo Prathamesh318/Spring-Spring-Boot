@@ -1,0 +1,46 @@
+package com.infosys.diexample1.config;
+
+import org.springframework.context.annotation.Configuration;
+
+import com.infosys.diexample1.beans.Address;
+import com.infosys.diexample1.beans.Employee;
+import com.infosys.diexample1.beans.Person;
+import com.infosys.diexample1.beans.Vehicle;
+
+import org.springframework.context.annotation.Bean;
+
+
+@Configuration
+public class Config {
+	
+		@Bean
+		Address getAddress() {
+			Address add=new Address("New Delhi",2344);
+			return add;
+		}
+		
+		@Bean
+		Employee getEmployee() {
+			Employee emp=new Employee();
+			emp.setEmpName("Rohan");
+			emp.setEmpId(101);
+			return emp;
+		}
+	
+		@Bean
+		Vehicle getVehicleData() {
+			Vehicle v= new Vehicle();
+			v.setModelName("Audi");
+			v.setMileage(7.45);
+			
+			return v;
+		}
+		
+		@Bean 
+		Person getPerson() {
+			Person rohan =new Person();
+			rohan.setName("Rohan");
+			return rohan;
+		}
+		
+}

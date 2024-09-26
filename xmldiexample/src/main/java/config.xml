@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean
+    	id="trainer" class="com.infosys.xmldiexample.beans.Trainer">
+    <property name="trainerName" value="Prathamesh"></property>
+        <property name="trainerId" value="10"></property>
+    </bean>
+    
+    <bean
+    id="batch1"  class="com.infosys.xmldiexample.beans.Batch">
+    
+    
+<constructor-arg name="batchId" value="1" type="int">
+</constructor-arg>   
+    
+<constructor-arg name="batchName" value="PDA_Spring_Batch7">
+</constructor-arg>  
+    
+<constructor-arg name="batchSize" value="22" type="int">
+</constructor-arg>  
+
+ </bean>
+    
+    
+
+</beans>
